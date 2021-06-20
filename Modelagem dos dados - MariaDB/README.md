@@ -1,4 +1,24 @@
-/* Tabela Curso */
+# Concepção da elicitação dos dados do SysSchool
+---
+
+### Modelo Entidade Relacionamento - MER
+![MER](mer.png)
+
+---
+
+### Diagrama Entidade Relacionamento - DER
+![DER](der.png)
+
+---
+
+### Log DDL feito no SGBD MariaDB
+
+#### Base de dados do SysSchool 
+CREATE DATABASE sysschool;
+
+<br>
+
+#### Tabela Curso 
 
 CREATE TABLE Curso (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -6,9 +26,9 @@ CREATE TABLE Curso (
     qnt_alunos INT
 );
 
+<br>
 
-
-/* Tabela Nota */
+#### Tabela Nota 
 
 CREATE TABLE Nota (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -18,8 +38,9 @@ CREATE TABLE Nota (
     nota_4Semestre DECIMAL(4, 2)
 );
 
+<br>
 
-/* Tabela Professor */
+#### Tabela Professor 
 
 CREATE TABLE Professor (
     matricula INT PRIMARY KEY AUTO_INCREMENT,
@@ -29,8 +50,9 @@ CREATE TABLE Professor (
     especialidade VARCHAR(20)
 );
 
+<br>
 
-/* Tabela Turma */
+#### Tabela Turma 
 
 CREATE TABLE Turma (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -39,9 +61,9 @@ CREATE TABLE Turma (
     FOREIGN KEY (fk_Curso_id) REFERENCES Curso(id) ON DELETE CASCADE
 );
 
+<br>
 
-
-/* Tabela Disciplina */
+#### Tabela Disciplina 
 
 CREATE TABLE Disciplina (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -52,9 +74,9 @@ CREATE TABLE Disciplina (
     FOREIGN KEY (fk_Professor_matricula) REFERENCES Professor(matricula)
 );
  
+<br>
 
- 
-/* Tabela Aluno */
+#### Tabela Aluno 
 
 CREATE TABLE Aluno (
     matricula INT PRIMARY KEY AUTO_INCREMENT,
