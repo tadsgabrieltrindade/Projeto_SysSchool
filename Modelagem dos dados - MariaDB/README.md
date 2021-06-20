@@ -2,12 +2,12 @@
 ---
 
 ### Modelo Entidade Relacionamento - MER
-![MER](mer.png)
+![MER](MER.png)
 
 ---
 
 ### Diagrama Entidade Relacionamento - DER
-![DER](der.png)
+![DER](DER.png)
 
 ---
 
